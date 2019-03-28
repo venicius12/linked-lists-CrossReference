@@ -1,0 +1,20 @@
+Objetivo:
+Um programa de referência cruzada (cross-reference) lê todas as palavras de um texto e estabelece relações entre elas. Uma referência que pode ser estabelecida é identificar quantas vezes cada palavra aparece em um texto.
+
+O objetivo deste trabalho é implementar a estrutura para manter a referência cruzada de um texto. A estrutura considera a organização das palavras em dois níveis: o primeiro nível separa as palavras pela letra inicial, e o segundo nível mantém a ordem alfabética das palavras que iniciam pela mesma letra. Para cada palavra mantida na estrutura, além da palavra do texto deve aparecer a quantidade de vezes que a palavra aparece.
+
+Representação:
+1) Para facilitar, as palavras devem estar todas em letra maiúscula ou minúscula (ou serem convertidas para a execução da referência cruzada). Números e sinais de pontuação não são considerados;
+2) Os textos serão armazenados em uma lista de listas (ou uma tabela hash de listas). A lista inicial (ou tabela hash) define o primeiro nível de acesso, e cada elemento dessa lista dá acesso (ou permite indexar) às palavras que iniciam com uma determinada letra. Cada letra está ligada então a uma lista de palavras que iniciam com essa letra (segundo nível de acesso). Cada lista de palavras de uma mesma letra deve ser implementada como uma lista encadeada, sem palavras repetidas. Junto com cada palavra deve estar a quantidade de vezes que a palavra aparece no texto. É necessário escolher e definir uma forma de armazenamento para a lista de letras, e para a lista encadeada, (simples, dupla, em ordem alfabética ou de inserção, etc.);
+3) o texto pode ser digitado linha a linha, ou palavra a palavra, ou armazenado em listas declaradas no próprio arquivo fonte do programa, ou lido de um arquivo, ou de alguma outra forma;
+4) O programa deve ler um texto submetido a cada vez, identificando cada palavra (o que delimita as palavras são ou os espaços em branco ou a nova linha, ou os sinais de pontuação : , . ! ? ; - ), e distribuir as palavras na lista de listas.
+
+Algumas operações básicas a serem oferecidas pelo programa:
+• insere_palavra(…): insere a palavra na lista de listas (se ela não existir, cria e insere o nodo; se ela existir, incrementa o contador
+• remove_palavra(…): remove a palavra da lista de listas (remove o nodo)
+• quantidade_palavras(…): exibe o total de palavras armazenadas
+• quantidade_palavras_letra(…): exibe o total de palavras armazenadas que iniciam por uma letra informada
+• referencia_total(…): exibe a lista de palavras e sua quantidade, em ordem alfabética, com uma palavra e sua quantidade por linha
+• referencia_letra(…): exibe a lista de palavras iniciadas por uma letra e sua quantidade, com uma palavra e sua quantidade por linha
+• maior_quantidade(...): exibe a palavra com maior quantidade de ocorrências. Se houver mais de uma palavra com a maior quantidade de ocorrências, exibe as palavras com essa quantidade em ordem alfabética
+• defina outras operações
